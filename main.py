@@ -77,6 +77,10 @@ if st.session_state.show_fu_toast:
     fu_placeholder = st.empty()
     fu_placeholder.markdown(
         f"""
+        <!-- autoplay audio from GitHub -->
+        <audio autoplay>
+            <source src="https://zhouhanwu.github.io/Paodekuai-Card-Game-Tracker/wocao.mp3" type="audio/mp3">
+        </audio>
         <style>
         #fu-toast {{
             position: fixed;
@@ -96,11 +100,6 @@ if st.session_state.show_fu_toast:
                 {get_text(st.session_state.language, "fu_toast")}
             </span>
         </div>
-
-        <!-- autoplay audio -->
-        <audio autoplay>
-            <source src="wocao.mp3" type="audio/mp3">
-        </audio>
         """,
         unsafe_allow_html=True
     )
@@ -109,7 +108,7 @@ if st.session_state.show_fu_toast:
 
     # Clear the toast after 1.5 seconds
     import time
-    time.sleep(1.5)
+    time.sleep(2.0)
     fu_placeholder.empty()
 
 # Place export button to the right of the title
