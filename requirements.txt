@@ -1,0 +1,14 @@
+# Paodekuai Game Tracker Dependencies
+# Core web framework
+streamlit>=1.28.0
+
+# Data manipulation and analysis
+pandas>=2.0.0
+
+# Note: translations.py is a local module, no external dependency needed
+# Note: wocao.mp3 and wocao.m4a are local audio files, no external dependency needed
+
+# Optional but recommended for development
+# numpy>=1.24.0  # pandas dependency, usually installed automatically
+# python-dateutil>=2.8.0  # pandas dependency, usually installed automatically
+# pytz>=2023.3  # pandas dependency, usually installed automatically
