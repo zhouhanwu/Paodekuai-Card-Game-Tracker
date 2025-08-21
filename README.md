@@ -1,105 +1,45 @@
 # 跑得快 (Paodekuai) Game Tracker
 
-A Streamlit application for tracking the Chinese card game "跑得快" (Paodekuai) with support for both English and Chinese languages.
+> Pork rib soup, ngoh hiang, mandarin oranges, angpaos. 
+> It is that time of the year again.  
+> Shu shu rushes home from the countryside, jie jie flies in from the big city.  
+> Full attendance, digging into grandma’s delicious cooking.  
+> Chun wan in the background, poker cards on the table.  
+> Paodekuai, the only time where the kids can gamble.  
+
+This Streamlit application was born from a chaotic but joyful Chinese New Year, when we realized keeping track of **Paodekuai** scores and payments often led to inefficiencies and disagreements. [Try it online here](https://paodekuai.streamlit.app/).  
+
+---
+
+## About Paodekuai
+
+**Paodekuai** (跑得快, literally "Run Fast") is a popular Chinese shedding-type card game, commonly played in families and among friends. The goal is simple: be the first to play all your cards. While the rules vary regionally, this tracker implements **my family's unique version**.
+
+### Brief Rules (Family Version)
+
+- Players: 2–10  
+- Objective: Be the first to empty your hand  
+- Game Play: Cards are played in singles, pairs, or sequences; each play must beat the previous [Standard sequences here](https://baike.baidu.com/item/%E8%B7%91%E5%BE%97%E5%BF%AB/12998100)
+- Special Rules:  
+  - "俘了" - a special status that occurs when a round ends with at least one player who has not emptied a single card from their hand. The set will automatically end, and the player will lose double the initial bet to the player with the lowest number of cards in the set.
+- Scoring: Wins and losses are calculated per round, with automatic tracking for ongoing totals  
+
+---
 
 ## Features
 
-- **Bilingual Support**: Switch between English and Chinese interfaces
-- **Game Tracking**: Track multiple sets, rounds, and player statistics
-- **Payment Management**: Calculate and track payments between players
-- **Data Export**: Export game data to CSV format
-- **Responsive UI**: Clean, modern interface with wide layout support
+- **Bilingual Support**: Switch between English and Chinese interfaces  
+- **Game Tracking**: Manage multiple sets, rounds, and player statistics  
+- **Payment Management**: Automatically calculate and track payments between players  
+- **Data Export**: Save game results as CSV  
+- **Responsive UI**: Clean, modern interface with wide layout support  
 
-## Language Support
+---
 
-The application now supports two languages:
+## Quick Start
 
-- **English (en)**: Default language with full English interface
-- **中文 (zh)**: Complete Chinese translation of all UI elements
+### Installation
 
-### Switching Languages
-
-1. Look for the language selector in the left sidebar
-2. Choose between "English" and "中文"
-3. The interface will immediately update to the selected language
-4. Your language preference is saved during the session
-
-## Installation
-
-1. Install the required dependencies:
 ```bash
 pip install -r requirements.txt
-```
-
-2. Run the application:
-```bash
 streamlit run main.py
-```
-
-## Usage
-
-### Starting a New Game
-
-1. Use the sidebar to set the number of players (2-10)
-2. Enter unique names for each player
-3. Click "Start New Game" (or "开始新游戏" in Chinese)
-
-### Game Setup
-
-- **Bet Amount**: Set the amount players bet per set
-- **Elimination Threshold**: Set the card limit that triggers elimination
-- **Starting Cards**: Set the number of cards each player starts with
-
-### Adding Rounds
-
-1. Enter the remaining cards for each player
-2. Click "Add Round" (or "添加轮次" in Chinese)
-3. The system will automatically detect winners and calculate payments
-
-### Special Features
-
-- **FU Toast**: When a player gets "俘了" (captured), a special notification appears
-- **Payment Calculation**: Automatic calculation of winnings and losses
-- **Data Export**: Export all game data to CSV for record keeping
-
-## File Structure
-
-- `main.py`: Main application file with Streamlit interface
-- `translations.py`: Language translations and internationalization support
-- `test_translations.py`: Test script to verify translations
-- `requirements.txt`: Python dependencies
-
-## Translation System
-
-The application uses a centralized translation system:
-
-- All UI text is stored in the `translations.py` file
-- Text can include format placeholders (e.g., `{num}`, `{player}`)
-- Fallback to English if a translation key is missing
-- Easy to add new languages by extending the `TRANSLATIONS` dictionary
-
-### Adding New Languages
-
-To add support for additional languages:
-
-1. Add a new language code to the `TRANSLATIONS` dictionary in `translations.py`
-2. Provide translations for all existing keys
-3. Update the language selector in `main.py` to include the new option
-
-## Requirements
-
-- Python 3.7+
-- Streamlit
-- Pandas
-
-## Contributing
-
-Feel free to contribute by:
-- Adding new language translations
-- Improving the UI/UX
-- Adding new features
-- Reporting bugs or issues
-
-## License
-
-This project is open source and available under the MIT License.
